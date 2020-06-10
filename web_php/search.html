@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<b><font size="5">中国区EC2报价查询</font></b></br></br>
+<form name="form1" enctype="multipart/form-data" method="post" action="/test002.php">
+实例类型：     <input type="text" name="instance" > 输入实例类型 i.e. "c4.xlarge"（如果想查询所有c4实例也可以输入“c4”自动会做模糊搜索，不输入则默认所有实例类型）
+<br><label>vcpu:              			 
+<select name="vcpu">
+<option value="%">显示全部</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="4">4</option>
+<option value="8">8</option>
+<option value="16">16</option>
+<option value="32">32</option>
+<option value="36">36</option>
+<option value="40">40</option>
+<option value="48">48</option>
+<option value="64">64</option>
+<option value="72">72</option>
+<option value="96">96</option>
+<option value="128">128</option>
+</select>
+</label>
+<br><label>操作系统：  
+<select name="os">
+<option value="%">显示全部</option>
+<option value="linux">linux</option>
+<option value="windows">windows</option>
+<option value="suse">SUSE</option>
+<option value="rhel">RHEL</option>
+</select>
+</label>
+<br><label>区域： 		
+<select name="region">
+<option value="%">显示全部</option> 
+<option value="beijing">beijing</option>
+<option value="ningxia">ningxia</option>
+</select>
+</label>
+<br><label>tenancy： 
+<select name="tenancy">
+<option value="%">显示全部</option>
+<option value="shared">shared</option>
+<option value="dedicated">dedicated</option>
+</select>
+</label>
+<br><label>预装软件： 
+<select name="sw">
+<option value="%">显示全部</option>
+<option value="na">无预装</option>
+<option value="sql std">sql std</option>
+<option value="sql web">sql web</option>
+<option value="sql ent">sql ent</option>
+</select>
+</label>
+<input type="submit" value="提交">
+</form>
+
+
+
+
+
+
+<form action="/test003.php" method="post">
+<br><br><br><br><br><b><font size="5">中国区RDS报价查询</font></b></br></br>
+实例类型：     <input type="text" name="rtype" > 输入实例类型 i.e. "db.t2.micro"(支持模糊查询，比如输入db.t2可以返回所有的db.t2系列实例)
+<br>数据库引擎:  <input type="text" name="rengine" > 输入想要的数据库引擎 i.e. “mysql”, "postgresql", "mariadb"
+<br>区域：     <input type="text" name="rregion" > 输入具体的区域 "beijing" or "ningxia" （不输入则默认所有区域）
+<br>许可模式： <input type="text" name="rlicense" > 输入要求的许可模式，不输入默认所有模式
+<input type="submit" value="提交">
+</form>
+
+
+<br><br><br><br><br><br><br>作者：peterpan
+<br>投诉建议：wepan@amazon.com
+<br>工具每周自动更新，数据同步至最新官网价格
+</html>
+
+
